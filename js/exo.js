@@ -22,3 +22,8 @@ newTitle.textContent = "Vous consultez le profil de Hercule";
 newTitle.classList.add('banner__title');
 document.querySelector("#header-banner").append(newTitle);
 
+// Etape 5 : création boucle
+
+for (let i = 0; i < 12; i++) {
+    base.displayWork(i);
+}
