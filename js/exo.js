@@ -54,3 +54,11 @@ document.querySelector("#menu-toggler").addEventListener('click', () => {
     const headerBannerElt = document.querySelector('#header-banner');
     headerBannerElt.classList.toggle('banner--open');
 })
+
+// Etape 9 : évènement formulaire contact
+
+document.querySelector("#contact").addEventListener('submit', (event) => {
+    event.preventDefault();
+    document.querySelector(".contact__input").value = '';
+    alert('Hercule ne souhaite pas être dérangé.');
+});
