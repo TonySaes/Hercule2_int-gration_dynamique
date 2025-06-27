@@ -85,6 +85,19 @@ const herculeApp = {
         peoplePopularityBarElt.style.width = `${purcent}%`;
     },
 
+    //Etape 12 : Affichage activité terminées
+    displayActvities() {
+        document.querySelector("#activities").classList.remove('hidden');
+        for (const element in base.activities) {
+            if (base.activities[element].author === 'Hercule' && base.activities[element].finished === true) {
+                const activityUlElt = document.querySelector(".tasks");
+                const newLiTitleActivityElt = document.createElement('li');
+                newLiTitleActivityElt.textContent = base.activities[element].title;
+                activityUlElt.append(newLiTitleActivityElt);
+            }  
+        };
+    },
+    
     init() {
         base.fillProfil(herculeApp.hercule);
         base.printFriends(herculeApp.friends);
@@ -102,7 +115,8 @@ const herculeApp = {
         herculeApp.submitFormContact();
         herculeApp.displayPourcentage('hercule');
         herculeApp.displayPourcentage('cesar');
-    },
+        herculeApp.displayActvities();
+    }
 };
 
 herculeApp.init();
