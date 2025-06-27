@@ -26,4 +26,16 @@ document.querySelector("#header-banner").append(newTitle);
 
 for (let i = 0; i < 12; i++) {
     base.displayWork(i);
+};
+
+// Etape 6 : création condition
+const currentHour = base.getHour();
+const availibiltyElt = document.querySelector('#availability');
+if (currentHour >= 8 && currentHour < 20) {
+    availibiltyElt.textContent = 'Disponible';
+    availibiltyElt.classList.remove('off');
+}
+else {
+    availibiltyElt.textContent = 'Non disponible';
+    availibiltyElt.classList.add('off');
 }
