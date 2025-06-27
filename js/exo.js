@@ -47,3 +47,10 @@ function generatePseudoName(name, department) {
     return pseudoName;
 };
 document.querySelector("#profil-name").textContent = generatePseudoName(hercule.name, hercule.department);
+
+// Etape 8 : évènement
+
+document.querySelector("#menu-toggler").addEventListener('click', () => {
+    const headerBannerElt = document.querySelector('#header-banner');
+    headerBannerElt.classList.toggle('banner--open');
+})
