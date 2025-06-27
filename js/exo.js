@@ -39,3 +39,11 @@ else {
     availibiltyElt.textContent = 'Non disponible';
     availibiltyElt.classList.add('off');
 }
+
+// Etape 7 : création fonction
+
+function generatePseudoName(name, department) {
+    let pseudoName = `${name}-du-${department}`;
+    return pseudoName;
+};
+document.querySelector("#profil-name").textContent = generatePseudoName(hercule.name, hercule.department);
