@@ -9,3 +9,7 @@ const hercule = {
     inRelationship: true,
 };
 base.fillProfil(hercule)
+
+const friends = ['Jupiter', 'Junon', 'Alcmène', 'Déjanire'];
+base.printFriends(friends);
+base.setBestFriend(friends[0]);
