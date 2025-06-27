@@ -62,3 +62,28 @@ document.querySelector("#contact").addEventListener('submit', (event) => {
     document.querySelector(".contact__input").value = '';
     alert('Hercule ne souhaite pas être dérangé.');
 });
+
+//Etpae 10 : Algo affichage %
+
+function displayPourcentage(name) {
+  const herculeVote = base.vote.hercule;
+  const cesarVote = base.vote.cesar;
+  const totalVotes = herculeVote + cesarVote;
+  let purcent = 0;
+
+  if (name === 'hercule') {
+    purcent = Math.round((herculeVote / totalVotes) * 100);
+  }
+  else if (name === 'cesar') {
+    purcent = Math.round((cesarVote / totalVotes) * 100);
+  }
+
+   const peoplePopularityArticleElt = document.querySelector(`#trends-${name}`);
+   const peoplePopularityTextElt = peoplePopularityArticleElt.querySelector('.people__popularity')
+   peoplePopularityTextElt.textContent = `${purcent}%`;
+
+   const peoplePopularityBarElt = peoplePopularityArticleElt.querySelector('.people__bar');
+   peoplePopularityBarElt.style.width = `${purcent}%`;
+};
+displayPourcentage('hercule');
+displayPourcentage('cesar');

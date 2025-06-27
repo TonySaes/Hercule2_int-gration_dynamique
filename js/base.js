@@ -6,7 +6,8 @@ const base = {
   vote: {
     hercule: 120,
     cesar: 53,
-  },
+  }
+,
   activities: [
     {
       author: 'Hercule',
